@@ -18,6 +18,12 @@ $ cd your-project-name
 $ yarn
 ```
 
+## Что смотреть
+Весь код калькулятора расположен `https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/calc/calc.service.js`
+Также используются константы:
+`https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/admin/admin.constants.js`
+`https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/client/client.constants.js`
+
 ## Режим разрботки
 
 Запуск приложения в `dev` окружении. Это запустит рендер в [**hot-module-replacement**](https://webpack.js.org/guides/hmr-react/) режиме и стартонет webpack dev server:
@@ -35,6 +41,4 @@ $ yarn package
 ```
 Собраное приложение располагается в папке `release`.
 
-## License
-
-MIT © [Electron React Boilerplate](https://github.com/electron-react-boilerplate)
+## TODO
