@@ -26,7 +26,7 @@ $ yarn
 - [app/admin/admin.constants.js](https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/admin/admin.constants.js)
 - [app/client/client.constants.js](https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/client/client.constants.js)
 
-## Режим разрботки
+## Режим разработки
 
 Запуск приложения в `dev` окружении. Это запустит рендер в [**hot-module-replacement**](https://webpack.js.org/guides/hmr-react/) режиме и стартонет webpack dev server:
 
@@ -34,7 +34,7 @@ $ yarn
 $ yarn dev
 ```
 
-## Сборка приложение
+## Сборка приложения
 
 Чтоб собрать приложение запусти команду:
 
