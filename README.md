@@ -19,10 +19,12 @@ $ yarn
 ```
 
 ## Что смотреть
-Весь код калькулятора расположен `https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/calc/calc.service.js`
+Весь код калькулятора расположен в файле [app/calc/calc.service.js](https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/calc/calc.service.js),
+основной метод - `calculateTotal`
+
 Также используются константы:
-`https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/admin/admin.constants.js`
-`https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/client/client.constants.js`
+- [app/admin/admin.constants.js](https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/admin/admin.constants.js)
+- [app/client/client.constants.js](https://github.com/chiefraccoon/nakleiki-calc-electron/blob/master/app/client/client.constants.js)
 
 ## Режим разрботки
 
@@ -42,3 +44,9 @@ $ yarn package
 Собраное приложение располагается в папке `release`.
 
 ## TODO
+ - Перенести логику калькулятора на вебсайт
+ - Добавить валидацию на форму калькулятора
+ - - ...
+ - Добавить в админке поля для ввода значений цен и параметров калькулятора
+ - - ...
+ - ?Нужно ли скрывать логику расчета цен? - рассмотреть вариант расчета на беке через API
