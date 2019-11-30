@@ -18,6 +18,12 @@ matrix:
           working_dir: release
       script:
         - yarn package-mac
+      deploy:
+        provider: releases
+        api_key: $GH_TOKEN
+        file_glob: true
+        file: release/**/*
+        skip_cleanup: true
 
 #cache:
 #  yarn: true
