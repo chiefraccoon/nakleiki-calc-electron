@@ -7,6 +7,17 @@ matrix:
       addons:
         artifacts:
           working_dir: release
+      script:
+        - yarn package-win
+    - os: osx
+      language: node_js
+      node_js:
+        - node
+      addons:
+        artifacts:
+          working_dir: release
+      script:
+        - yarn package-mac
 
 cache:
   yarn: true
@@ -20,5 +31,3 @@ cache:
 install:
   - yarn --ignore-engines
 
-script:
-  - yarn package-win
