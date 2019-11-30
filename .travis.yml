@@ -19,14 +19,14 @@ matrix:
       script:
         - yarn package-mac
 
-cache:
-  yarn: true
-  directories:
-    - node_modules
-    - $(npm config get prefix)/lib/node_modules
-    - flow-typed
-    - $HOME/.cache/electron
-    - $HOME/.cache/electron-builder
+#cache:
+#  yarn: true
+#  directories:
+#    - node_modules
+#    - $(npm config get prefix)/lib/node_modules
+#    - flow-typed
+#    - $HOME/.cache/electron
+#    - $HOME/.cache/electron-builder
 
 install:
   - yarn --ignore-engines
