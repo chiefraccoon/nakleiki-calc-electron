@@ -17,6 +17,8 @@ matrix:
           - release/*.exe
           - release/*.msi
         skip_cleanup: true
+        on:
+          tags: false
     - os: osx
       language: node_js
       node_js:
@@ -34,6 +36,8 @@ matrix:
           - release/*.zip
           - release/*.dmg
         skip_cleanup: true
+        on:
+          tags: false
 
 cache:
   yarn: true
