@@ -8,7 +8,7 @@ matrix:
         artifacts:
           working_dir: release
       script:
-        - yarn package-win
+        - travis_wait 20 yarn package-win
     - os: osx
       language: node_js
       node_js:
@@ -17,7 +17,7 @@ matrix:
         artifacts:
           working_dir: release
       script:
-        - yarn package-mac
+        - travis_wait 20 yarn package-mac
       deploy:
         provider: releases
         api_key: $GH_TOKEN
@@ -25,11 +25,11 @@ matrix:
         file: release/**/*
         skip_cleanup: true
 
-#cache:
-#  yarn: true
-#  directories:
-#    - node_modules
-#    - $(npm config get prefix)/lib/node_modules
+cache:
+  yarn: true
+  directories:
+    - node_modules
+    - $(npm config get prefix)/lib/node_modules
 #    - flow-typed
 #    - $HOME/.cache/electron
 #    - $HOME/.cache/electron-builder
