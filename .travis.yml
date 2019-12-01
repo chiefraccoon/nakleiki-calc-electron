@@ -22,7 +22,7 @@ matrix:
         provider: releases
         api_key: $GH_TOKEN
         file_glob: true
-        file: release/**/*
+        file: release/*
         skip_cleanup: true
 
 cache:
