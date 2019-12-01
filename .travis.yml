@@ -9,6 +9,14 @@ matrix:
           working_dir: release
       script:
         - travis_wait 20 yarn package-win
+      deploy:
+        provider: releases
+        api_key: $GH_TOKEN
+        file_glob: true
+        file:
+          - release/*.exe
+          - release/*.msi
+        skip_cleanup: true
     - os: osx
       language: node_js
       node_js:
@@ -18,6 +26,14 @@ matrix:
           working_dir: release
       script:
         - travis_wait 20 yarn package-mac
+      deploy:
+        provider: releases
+        api_key: $GH_TOKEN
+        file_glob: true
+        file:
+          - release/*.zip
+          - release/*.dmg
+        skip_cleanup: true
 
 cache:
   yarn: true
@@ -30,11 +46,4 @@ cache:
 
 install:
   - yarn --ignore-engines
-
-deploy:
-  provider: releases
-  api_key: $GH_TOKEN
-  file_glob: true
-  file: release/*.zip
-  skip_cleanup: true
 
